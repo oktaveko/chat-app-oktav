@@ -45,4 +45,4 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
 
 Or
 
-Try live version here![![Deploy](https://www.herokucdn.com/deploy/button.png)](https://oktav-chat-app.herokuapp.com/)
+Try live version here![Heroku](https://oktav-chat-app.herokuapp.com/)
