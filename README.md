@@ -44,3 +44,5 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
     Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 Or
+
+Try live version here! [Heroku](https://oktav-chat-app.herokuapp.com/)
