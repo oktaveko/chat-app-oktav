@@ -115,7 +115,8 @@ button:disabled {
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;
+    text-align: start;
 }
 
 .message__name {
@@ -131,6 +132,25 @@ button:disabled {
 
 .message a {
     color: #0070CC;
+}
+
+.message p {
+    padding-bottom:5px;
+}
+
+.message-text {
+    background: #efefef none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #646464;
+    font-size: 14;
+    margin: 0;
+    padding: 7px 10px 12px 12px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 56%;
 }
 
 /* Message Composition Styles */
@@ -180,4 +200,9 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+
+#notCurrentUser {
+    text-align:end;
+    max-width: -56%;
 }

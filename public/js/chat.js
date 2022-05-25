@@ -32,10 +32,13 @@ const autoscroll = () => {
 
 socket.on('message', (message) =>{
     console.log(message);
+    console.log(username);
     const html = Mustache.render(messageTemplate, {
         username: message.username,
         message: message.text,
-        createdAt: moment(message.createdAt).format('h:mm a')
+        createdAt: moment(message.createdAt).format('h:mm a'),
+        sender: message.username === username.trim().toLowerCase() ||
+                message.username === "Admin" ? "currentUser":"notCurrentUser"
     });
     $messages.insertAdjacentHTML('beforeend', html);
     autoscroll();
@@ -46,7 +49,9 @@ socket.on('locationMessage', (message) => {
     const html = Mustache.render(locationMessageTemplate, {
         username: message.username,
         url : message.url,
-        createdAt: moment(message.createdAt).format('h:mm a')
+        createdAt: moment(message.createdAt).format('h:mm a'),
+        sender: message.username === username.trim().toLowerCase() ||
+                message.username === "Admin" ? "currentUser":"notCurrentUser"
     });
     $messages.insertAdjacentHTML('beforeend', html);
     autoscroll();
